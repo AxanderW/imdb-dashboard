@@ -21,9 +21,9 @@ import sys
 password = os.environ['AWS_IMDB_PW']
 
 # AWS connection setup. Declare username and endpoint piece. 
-user = 'masterblaster'
-endpoint = 'imdb-explorer.clhfspuaimbp.us-east-1.rds.amazonaws.com'
-args = "ssl_ca=../database/config/rds-ca-2015-us-east-1-root.pem"
+user = 'axander'
+endpoint = 'axander-test-db.clq3k0xjjqbl.us-east-2.rds.amazonaws.com'
+args = "ssl_ca=../../database/config/rds-ca-2015-us-east-2-root.pem"
 
 # AWS username and password. 
 rds_connection_string = f"{user}:{password}@{endpoint}/imdb_lean?{args}"

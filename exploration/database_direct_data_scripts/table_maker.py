@@ -48,11 +48,11 @@ class Pic(Base):
   series_id = relationship('Series', foreign_keys=[tconst])
 
 # CREATE DATABASE connection
-def create_connection(make_tables=False, folder_helper=''):
+def create_connection(make_tables=False, folder_helper='../'):
     password = os.environ['AWS_IMDB_PW']
-    user = 'masterblaster'
-    endpoint = 'imdb-explorer.clhfspuaimbp.us-east-1.rds.amazonaws.com'
-    args = f'ssl_ca={folder_helper}../database/config/rds-ca-2015-us-east-1-root.pem'
+    user = 'axander'
+    endpoint = 'axander-test-db.clq3k0xjjqbl.us-east-2.rds.amazonaws.com'
+    args = f'ssl_ca={folder_helper}../database/config/rds-ca-2015-us-east-2-root.pem'
     print(args)
     rds_connection_string = f"{user}:{password}@{endpoint}/imdb_production?{args}"
     engine = create_engine(f'mysql://{rds_connection_string}')
